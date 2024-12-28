@@ -12,6 +12,7 @@ Here’s a breakdown of your project in steps, similar to the style you provided
 
 1. Data Generation and Ingestion
     Data Generation:
+   
           Weather data is fetched for various cities using the OpenWeatherMap API.
           Each data fetch provides information like temperature, humidity, wind speed, and more, along with a timestamp.
 
@@ -19,14 +20,14 @@ Here’s a breakdown of your project in steps, similar to the style you provided
           The generated weather data is sent to a Kafka topic (Weather-pipeline) for real-time ingestion.
           Kafka ensures fault-tolerant and scalable data streaming.
 
-2. Data Storage
+3. Data Storage
    MongoDB:
           The raw weather data fetched from the API is stored in a MongoDB collection named weather_row_data.
           This ensures that all incoming data is persisted for further processing.
 
 
 
-3. Real-Time Data Processing with Spark
+4. Real-Time Data Processing with Spark
    Apache Spark Streaming:
           Spark reads data from the Kafka topic Weather-pipeline.
           The incoming JSON data is parsed and transformed using the following steps:
@@ -37,13 +38,13 @@ Here’s a breakdown of your project in steps, similar to the style you provided
 
 
 
-4. Data Modeling
+5. Data Modeling
   The processed data is organized for analysis, ensuring fields like weather conditions, timestamps, and city-specific information are easily accessible.
   This enables integration with visualization and reporting tools for further insights.
 
 
 
-5. Real-Time Reporting and Visualization
+6. Real-Time Reporting and Visualization
   Dashboards:
         Real-time dashboards are created using visualization tools (e.g., Power BI or similar tools).
         Dashboards update hourly, providing insights into:
