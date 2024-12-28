@@ -53,6 +53,7 @@ Here’s a breakdown of your project in steps, similar to the style you provided
 
 
 5. Airflow for Pipeline Orchestration
+   
       The entire workflow is orchestrated using Apache Airflow.
       Tasks are defined in a DAG (Data_Pipeline), including:
 
