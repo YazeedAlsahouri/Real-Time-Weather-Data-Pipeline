@@ -39,8 +39,9 @@ Here’s a breakdown of your project in steps, similar to the style you provided
    
       Spark reads data from the Kafka topic Weather-pipeline.
       The incoming JSON data is parsed and transformed using the following steps:
-              Schema Definition: Define a structured schema for weather data, including fields like temperature, pressure, wind speed, and city.
-              Transformation: Convert temperatures from Kelvin to Celsius, map city names to corrected names, and standardize data.
+   
+      Schema Definition: Define a structured schema for weather data, including fields like temperature, pressure, wind speed, and city.
+      Transformation: Convert temperatures from Kelvin to Celsius, map city names to corrected names.
    
    Processed Data Storage:
    
@@ -48,36 +49,42 @@ Here’s a breakdown of your project in steps, similar to the style you provided
 
 
 
-4. Data Modeling
+5. Data Modeling
    
       The processed data is organized for analysis, ensuring fields like weather conditions, timestamps, and city-specific information are easily accessible.
+   
       This enables integration with visualization and reporting tools for further insights.
 
 
-5. Airflow for Pipeline Orchestration
+7. Airflow for Pipeline Orchestration
    
       The entire workflow is orchestrated using Apache Airflow.
+   
       Tasks are defined in a DAG (Data_Pipeline), including:
 
       Fetching raw data.
+   
       Sending data to Kafka.
+   
       Processing and storing data.
 
       The pipeline is scheduled to run hourly.
 
-6. Real-Time Reporting and Visualization
+9. Real-Time Reporting and Visualization
     
    Dashboards:
 
-      Real-time dashboards are created using visualization tools (e.g., Power BI or similar tools).
+      Real-time dashboards are created using visualization tools (Power BI).
 
       Dashboards update hourly, providing insights into:
 
    Weather conditions across cities.
+   
    Temperature trends.
+   
    Wind speed and humidity variations.
 
-   and these are pictures from the dashboard
+   And these are pictures from the dashboard
    ![Alt text for the image](images/png1.png)
    ![Alt text for the image](images/png2.png)
    ![Alt text for the image](images/png3.png)
